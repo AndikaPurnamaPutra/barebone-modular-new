@@ -1,0 +1,39 @@
+// FLEX CENTER
+@mixin flex-center($direction: row)
+  display: flex
+  flex-direction: $direction
+  justify-content: center
+  align-items: center
+
+// CONTAINER
+@mixin container($width: 1200px, $padding: 16px)
+  max-width: $width
+  margin-left: auto
+  margin-right: auto
+  padding-left: $padding
+  padding-right: $padding
+
+// CLEARFIX
+@mixin clearfix()
+  &::after
+    content: ""
+    display: table
+    clear: both
+
+// VISUALLY HIDDEN (aksesibilitas)
+@mixin visually-hidden()
+  position: absolute !important
+  width: 1px
+  height: 1px
+  overflow: hidden
+  clip: rect(1px,1px,1px,1px)
+  white-space: nowrap
+
+// MEDIA QUERY
+@mixin respond($breakpoint)
+  $size: map.get($breakpoints, $breakpoint)
+  @if $size
+    @media (max-width: $size)
+      @content
+  @else
+    @warn "Breakpoint `#{$breakpoint}` tidak ditemukan di $breakpoints"

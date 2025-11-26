@@ -1,0 +1,40 @@
+@use "../abstracts/variables" as variables
+@use "../abstracts/colors" as colors
+
+// Body & font dasar
+body
+  font-family: variables.$font-stack
+  font-size: variables.$base-font-size
+  line-height: variables.$base-line-height
+  color: colors.$grey-900
+  background-color: colors.$grey-100
+
+// Headings (h1 - h6)
+h1, h2, h3, h4, h5, h6
+  font-family: variables.$font-stack
+  font-weight: 600
+
+h1
+  font-size: 2.5rem
+h2
+  font-size: 2rem
+h3
+  font-size: 1.75rem
+h4
+  font-size: 1.5rem
+h5
+  font-size: 1.25rem
+h6
+  font-size: 1rem
+
+// Paragraphs
+// p
+//   margin-bottom: variables.$space-md
+
+// Links
+a
+  color: colors.$color-primary
+  text-decoration: none
+  transition: 0.3s
+  &:hover
+    text-decoration: underline

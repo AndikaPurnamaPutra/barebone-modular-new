@@ -1,0 +1,33 @@
+@use "../abstracts/variables" as v
+@use "../abstracts/colors" as c
+@use "../abstracts/mixins" as mix
+
+.modal-overlay
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0,0,0,0.5)
+  display: none
+  justify-content: center
+  align-items: center
+  // z-index: v.$z-modal
+
+.modal
+  background-color: c.$color-white
+  // border-radius: v.$radius-md
+  // padding: v.$space-lg
+  max-width: 500px
+  width: 90%
+  // box-shadow: v.$box-shadow-md
+  position: relative
+
+.modal-close
+  position: absolute
+  // top: v.$space-sm
+  // right: v.$space-sm
+  background: none
+  border: none
+  font-size: 1.25rem
+  cursor: pointer

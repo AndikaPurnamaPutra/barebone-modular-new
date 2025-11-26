@@ -1,0 +1,7 @@
+@use "variables" as variables
+
+@function px-to-rem($px, $base: variables.$base-font-size)
+  @return ($px / $base) * 1rem
+
+@function clamp-font($min, $preferred, $max)
+  @return clamp(px-to-rem($min), $preferred, px-to-rem($max))

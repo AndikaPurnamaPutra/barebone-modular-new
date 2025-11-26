@@ -1,0 +1,24 @@
+@use "../abstracts/variables" as v
+@use "../abstracts/mixins" as mix
+@use "../abstracts/colors" as c
+
+.footer
+  background-color: c.$grey-800
+  color: c.$grey-100
+  // padding: v.$space-lg v.$space-md
+  @include mix.flex-center(column)
+
+  // Links
+  .footer-links
+    display: flex
+    // gap: v.$space-md
+    // margin-bottom: v.$space-sm
+    a
+      color: c.$grey-100
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+
+  // Copyright
+  .copyright
+    font-size: 0.875rem
